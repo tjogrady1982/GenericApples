@@ -10,6 +10,22 @@ namespace GenericApples
     {
         static void Main(string[] args)
         {
+
+            var coxesApples = new List<Apple> { new Apple(), new Apple(), new Apple() };
+            var grannySmithApples = new List<Apple> { new Apple(), new Apple(), new Apple() };
+            var pinkLadyApples = new List<Apple> { new Apple(), new Apple(), new Apple(), new Apple() };
+            var braeburnApples = new List<Apple> { new Apple(), new Apple()};
+
+            var firstBoxOfApples = new Box(coxesApples);
+            var secondBoxOfApples = new Box(grannySmithApples);
+            var thirdBoxOfApples = new Box(pinkLadyApples);
+            var fourthBoxOfApples = new Box(braeburnApples);
+
+            var cart = new List<Box>();
+            cart.Add(firstBoxOfApples);
+            cart.Add(secondBoxOfApples);
+            cart.Add(thirdBoxOfApples);
+            cart.Add(fourthBoxOfApples);
         }
     }
 }
