@@ -26,6 +26,13 @@ namespace GenericApples
             cart.Add(secondBoxOfApples);
             cart.Add(thirdBoxOfApples);
             cart.Add(fourthBoxOfApples);
+
+            var appleCounter = new Counter<Apple>();
+            //pinkLadyApples.ForEach(appleCounter)
+            //pinkLadyApples.ForEach(appleCounter.Add);
+
+            //var boxCounter = new Counter<Box<Apple>>();
+            //cartCounter.Add(cart);
         }
     }
 }

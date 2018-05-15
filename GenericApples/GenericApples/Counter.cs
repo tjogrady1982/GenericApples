@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace GenericApples
 {
-    class Counter
+    class Counter<T>
     {
+        
+
+        public static void Add(T item)
+        {
+            
+        }
+
     }
 }
