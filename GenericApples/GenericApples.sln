@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericApples", "GenericApples\GenericApples.csproj", "{1B9B704E-B960-4656-8336-F0F61E271F2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B9B704E-B960-4656-8336-F0F61E271F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B9B704E-B960-4656-8336-F0F61E271F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B9B704E-B960-4656-8336-F0F61E271F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B9B704E-B960-4656-8336-F0F61E271F2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75B75779-E88E-4765-BB7E-FFDC352C0CD1}
+	EndGlobalSection
+EndGlobal
