@@ -23,13 +23,18 @@ namespace GenericApples
             var thirdBoxOfApples = pinkLadyApples;
             var fourthBoxOfApples = braeburnApples;
 
-            var cart = new List<Apple>[]
-            {
-                firstBoxOfApples,
-                secondBoxOfApples,
-                thirdBoxOfApples,
-                fourthBoxOfApples
-            };
+            var cart = new List<Apple>();
+            cart.AddRange(firstBoxOfApples);
+            cart.AddRange(secondBoxOfApples);
+            cart.AddRange(thirdBoxOfApples);
+            cart.AddRange(fourthBoxOfApples);
+
+            //{
+            //    firstBoxOfApples,
+            //    secondBoxOfApples,
+            //    thirdBoxOfApples,
+            //    fourthBoxOfApples
+            //};
 
             var appleCounter = new Counter<Apple>();
             pinkLadyApples.ForEach(appleCounter.Add);
@@ -43,9 +48,9 @@ namespace GenericApples
             Console.WriteLine(boxCounter.CountList.Count);
 
             var cartCounter = new Counter<Apple>();
-            //cart.ForEach(cartCounter.Add);
+            cart.ForEach(cartCounter.Add);
 
-            //Console.WriteLine(boxCounter.CountList.Count);
+            Console.WriteLine(cartCounter.CountList.Count);
 
             Console.ReadLine();
         }
