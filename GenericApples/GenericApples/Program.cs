@@ -16,23 +16,38 @@ namespace GenericApples
             var pinkLadyApples = new List<Apple> { new Apple(), new Apple(), new Apple(), new Apple() };
             var braeburnApples = new List<Apple> { new Apple(), new Apple()};
 
-            var firstBoxOfApples = new Box(coxesApples);
-            var secondBoxOfApples = new Box(grannySmithApples);
-            var thirdBoxOfApples = new Box(pinkLadyApples);
-            var fourthBoxOfApples = new Box(braeburnApples);
 
-            var cart = new List<Box>();
-            cart.Add(firstBoxOfApples);
-            cart.Add(secondBoxOfApples);
-            cart.Add(thirdBoxOfApples);
-            cart.Add(fourthBoxOfApples);
+            //var box = new List<Apple>();
+            var firstBoxOfApples = coxesApples;
+            var secondBoxOfApples = grannySmithApples;
+            var thirdBoxOfApples = pinkLadyApples;
+            var fourthBoxOfApples = braeburnApples;
+
+            var cart = new List<Apple>[]
+            {
+                firstBoxOfApples,
+                secondBoxOfApples,
+                thirdBoxOfApples,
+                fourthBoxOfApples
+            };
 
             var appleCounter = new Counter<Apple>();
-            //pinkLadyApples.ForEach(appleCounter)
-            //pinkLadyApples.ForEach(appleCounter.Add);
+            pinkLadyApples.ForEach(appleCounter.Add);
 
-            //var boxCounter = new Counter<Box<Apple>>();
-            //cartCounter.Add(cart);
+            Console.WriteLine(appleCounter.CountList.Count);
+            
+
+            var boxCounter = new Counter<Apple>();
+            firstBoxOfApples.ForEach(boxCounter.Add);
+
+            Console.WriteLine(boxCounter.CountList.Count);
+
+            var cartCounter = new Counter<Apple>();
+            //cart.ForEach(cartCounter.Add);
+
+            //Console.WriteLine(boxCounter.CountList.Count);
+
+            Console.ReadLine();
         }
     }
 }

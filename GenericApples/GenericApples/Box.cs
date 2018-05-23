@@ -8,12 +8,12 @@ namespace GenericApples
 {
     public class Box
     {
-        public Box(List<Apple> apple)
-        {
-            Apple = apple;
-        }
+        //public Box(List<Apple> apple)
+        //{
+        //    Apple = apple;
+        //}
 
-         public List<Apple> Apple { get; set; }
+        // public List<Apple> Apple { get; set; }
     }
 
 }

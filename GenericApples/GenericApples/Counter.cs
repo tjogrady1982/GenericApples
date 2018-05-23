@@ -6,14 +6,22 @@ using System.Threading.Tasks;
 
 namespace GenericApples
 {
-    class Counter<T>
+    public class Counter<T>
     {
+        public List<T> CountList = new List<T>();
         
 
-        public static void Add(T item)
+        public int Count(T Item)
         {
-            
+            return CountList.Count;
         }
 
+        public void Add(T item)
+        {
+            //var countList = new CountList();
+            CountList.Add(item); 
+        }
+
+       
     }
 }
