@@ -18,39 +18,43 @@ namespace GenericApples
 
 
             //var box = new List<Apple>();
-            var firstBoxOfApples = coxesApples;
-            var secondBoxOfApples = grannySmithApples;
-            var thirdBoxOfApples = pinkLadyApples;
-            var fourthBoxOfApples = braeburnApples;
+            var firstBoxOfApples = new Box<Apple>();
 
-            var cart = new List<Apple>();
-            cart.AddRange(firstBoxOfApples);
-            cart.AddRange(secondBoxOfApples);
-            cart.AddRange(thirdBoxOfApples);
-            cart.AddRange(fourthBoxOfApples);
+            firstBoxOfApples.Add(new Apple());
+            firstBoxOfApples.Add(new Apple());
+            firstBoxOfApples.Add(new Apple());
 
-            //{
-            //    firstBoxOfApples,
-            //    secondBoxOfApples,
-            //    thirdBoxOfApples,
-            //    fourthBoxOfApples
-            //};
+            var secondBoxOfApples = new Box<Apple>();
+            secondBoxOfApples.Add(new Apple());
+            secondBoxOfApples.Add(new Apple());
+
+
+            var cart = new Cart<Apple>();
+            cart.Add(firstBoxOfApples);
+            cart.Add(secondBoxOfApples);
+           
 
             var appleCounter = new Counter<Apple>();
             pinkLadyApples.ForEach(appleCounter.Add);
 
-            Console.WriteLine(appleCounter.CountList.Count);
+            Console.WriteLine(appleCounter.Count);
             
 
-            var boxCounter = new Counter<Apple>();
-            firstBoxOfApples.ForEach(boxCounter.Add);
+            var boxCounter = new Counter<Box<Apple>>();
+            boxCounter.Add(firstBoxOfApples);
 
-            Console.WriteLine(boxCounter.CountList.Count);
+            Console.WriteLine(boxCounter.Count);
 
-            var cartCounter = new Counter<Apple>();
-            cart.ForEach(cartCounter.Add);
+            var cartCounter = new Counter<Cart<Apple>>();
+            cartCounter.Add(cart);
 
-            Console.WriteLine(cartCounter.CountList.Count);
+            Console.WriteLine(cartCounter.Count);
+
+            var anythingCounter = new Counter<ICountable>();
+            braeburnApples.ForEach(anythingCounter.Add);
+            anythingCounter.Add(cart);
+
+            Console.WriteLine(anythingCounter.Count);
 
             Console.ReadLine();
         }

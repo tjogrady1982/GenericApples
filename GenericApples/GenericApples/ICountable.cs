@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace GenericApples
 {
-    class Cart<T> : Box<Box<T>> where T : ICountable
+    public interface ICountable
     {
-
+        int Count { get; }
+      
     }
 }

@@ -6,14 +6,19 @@ using System.Threading.Tasks;
 
 namespace GenericApples
 {
-    public class Box
+    public class Box<T> : ICountable where T : ICountable
     {
-        //public Box(List<Apple> apple)
-        //{
-        //    Apple = apple;
-        //}
+        private readonly List<T> contents = new List<T>();
 
-        // public List<Apple> Apple { get; set; }
+        public void Add(T item)
+        {
+            contents.Add(item);
+        }
+
+        public int Count
+        {
+            get { return contents.Sum(c => c.Count); }
+        }
     }
 
 }

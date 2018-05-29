@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace GenericApples
 {
-    public class Apple
+    public class Apple : ICountable
     {
         public string Variety { get; set; }
+        public int Count => 1;
     }
 }
