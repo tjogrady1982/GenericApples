@@ -8,7 +8,11 @@ namespace GenericApples
 {
     public class Apple : ICountable
     {
-        public string Variety { get; set; }
+        public Apple (string variety)
+        {
+            Variety = variety;
+        }
+        public string Variety { get; }
         public int Count => 1;
     }
 }

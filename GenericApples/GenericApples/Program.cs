@@ -11,22 +11,22 @@ namespace GenericApples
         static void Main(string[] args)
         {
 
-            var coxesApples = new List<Apple> { new Apple(), new Apple(), new Apple() };
-            var grannySmithApples = new List<Apple> { new Apple(), new Apple(), new Apple() };
-            var pinkLadyApples = new List<Apple> { new Apple(), new Apple(), new Apple(), new Apple() };
-            var braeburnApples = new List<Apple> { new Apple(), new Apple()};
+            var coxesApples = new List<Apple> { new Apple("Cox"), new Apple("Cox"), new Apple("Cox") };
+            var grannySmithApples = new List<Apple> { new Apple("Granny Smith"), new Apple("Granny Smith"), new Apple("Granny Smith") };
+            var pinkLadyApples = new List<Apple> { new Apple("Pink Lady"), new Apple("Pink Lady"), new Apple("Pink Lady"), new Apple("Pink Lady") };
+            var braeburnApples = new List<Apple> { new Apple("Braburn"), new Apple("Braeburn")};
 
 
             //var box = new List<Apple>();
             var firstBoxOfApples = new Box<Apple>();
 
-            firstBoxOfApples.Add(new Apple());
-            firstBoxOfApples.Add(new Apple());
-            firstBoxOfApples.Add(new Apple());
+            firstBoxOfApples.Add(new Apple("Cox"));
+            firstBoxOfApples.Add(new Apple("Cox"));
+            firstBoxOfApples.Add(new Apple("Braeburn"));
 
             var secondBoxOfApples = new Box<Apple>();
-            secondBoxOfApples.Add(new Apple());
-            secondBoxOfApples.Add(new Apple());
+            secondBoxOfApples.Add(new Apple("Braeburn"));
+            secondBoxOfApples.Add(new Apple("Braeburn"));
 
 
             var cart = new Cart<Apple>();
