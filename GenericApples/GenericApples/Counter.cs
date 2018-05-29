@@ -17,9 +17,9 @@ namespace GenericApples
             this.variety = variety;
         }
 
-        public Counter() //: this(variety => true)
+        public Counter() : this(variety => true)
         {
-
+            //variety = Func<T,bool> false;
         }
         
         
@@ -30,7 +30,8 @@ namespace GenericApples
             {
                 count += item.Count;
             }
-            
+
+
         }
 
         public int Count => count;
