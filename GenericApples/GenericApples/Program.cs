@@ -14,8 +14,8 @@ namespace GenericApples
             var coxesApples = new List<Apple> { new Apple("Cox"), new Apple("Cox"), new Apple("Cox") };
             var grannySmithApples = new List<Apple> { new Apple("Granny Smith"), new Apple("Granny Smith"), new Apple("Granny Smith") };
             var pinkLadyApples = new List<Apple> { new Apple("Pink Lady"), new Apple("Pink Lady"), new Apple("Pink Lady"), new Apple("Pink Lady") };
-            var braeburnApples = new List<Apple> { new Apple("Braburn"), new Apple("Braeburn")};
-
+            var braeburnApples = new List<Apple> { new Apple("Braeburn"), new Apple("Braeburn")};
+            var groupOfApples = new List<Apple> { new Apple("Braeburn"), new Apple("Braeburn"), new Apple("Cox") };
 
             //var box = new List<Apple>();
             var firstBoxOfApples = new Box<Apple>();
@@ -35,10 +35,15 @@ namespace GenericApples
            
 
             var appleCounter = new Counter<Apple>();
-            pinkLadyApples.ForEach(appleCounter.Add);
+            pinkLadyApples.ForEach(appleCounter.Add); 
 
             Console.WriteLine(appleCounter.Count);
-            
+
+            //Test of delegate
+            var delegateCounter = new Counter<Apple>(apple => apple.Variety == "Braeburn");
+            groupOfApples.ForEach(delegateCounter.Add);
+            Console.WriteLine(delegateCounter.Count);
+
 
             var boxCounter = new Counter<Box<Apple>>();
             boxCounter.Add(firstBoxOfApples);

@@ -9,10 +9,28 @@ namespace GenericApples
     public class Counter<T> where T : ICountable
     {
         private int count;
+        Func<T, bool> variety;
+        //public delegate int Counter();
+
+        public Counter(Func<T,bool> variety)
+        {
+            this.variety = variety;
+        }
+
+        public Counter() //: this(variety => true)
+        {
+
+        }
+        
+        
 
         public void Add(T item)
         {
-            count += item.Count;
+            if (variety(item))
+            {
+                count += item.Count;
+            }
+            
         }
 
         public int Count => count;
